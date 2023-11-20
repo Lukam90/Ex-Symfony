@@ -9,9 +9,17 @@ POST /api/manufacturers
 }
 ```
 
+POST /api/products
 
-
-
+```json
+{
+    "mpn": "Foobar",
+    "name": "Rocket Powered Roller Skates",
+    "description": "Let you skate at unlimited speed",
+    "issueDate": "2023-11-20T10:31:19.971Z",
+    "manufacturer": "/api/manufacturers/1"
+}
+```
 
 
 

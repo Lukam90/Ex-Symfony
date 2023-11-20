@@ -52,6 +52,22 @@ class Manufacturer
     private ?\DateTimeInterface $listedDate = null;
 
     /**
+     * @var Product[] Available products from this manufacturer
+     * 
+     * @ORM\OneToMany(
+     *      targetEntity="Product", 
+     *      mappedBy="manufacturer",
+     *      cascade={"persist", "remove"}
+     * )
+     */
+    private iterable $products;
+
+    public function __construct()
+    {
+        $this->products = new ArrayCollection();
+    }
+
+    /**
      * @return int|null
      */
     public function getId(): ?int
@@ -121,5 +137,13 @@ class Manufacturer
     public function setListedDate(?\DateTimeInterface $listedDate): void
     {
         $this->listedDate = $listedDate;
+    }
+
+    /**
+     * @return Product[]
+     */
+    public function getProducts(): iterable|ArrayCollection
+    {
+        return $this->products;
     }
 }
