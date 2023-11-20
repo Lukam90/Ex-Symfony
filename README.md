@@ -24,10 +24,31 @@ symfony server:stop
 
 ```
 composer require api
+composer require symfony/maker-bundle --dev
+composer require doctrine/annotations
+```
+
+**Cache**
+
+```
+php bin/console cache:clear
 ```
 
 **Database**
 
 ```
 bin/console doctrine:database:create
+```
+
+**Migrations**
+
+```
+bin/console doctrine:schema:validate
+
+bin/console make:migration
+
+bin/console doctrine:migrations:diff
+bin/console doctrine:migrations:diff --from-empty-schema
+
+bin/console doctrine:migrations:migrate
 ```
