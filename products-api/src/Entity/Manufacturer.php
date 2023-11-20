@@ -25,7 +25,8 @@ use Symfony\Component\Validator\Constraints as Assert;
         new Post(),
         new Patch(),
         new Put(),
-    ]
+    ],
+    paginationItemsPerPage: 5
 )]
 class Manufacturer
 {

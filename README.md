@@ -34,6 +34,12 @@ composer require doctrine/annotations
 php bin/console cache:clear
 ```
 
+**Debug**
+
+```
+php bin/console debug:config api_platform
+```
+
 **Database**
 
 ```
