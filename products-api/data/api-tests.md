@@ -20,14 +20,3 @@ POST /api/products
     "manufacturer": "/api/manufacturers/1"
 }
 ```
-
-
-
-
-
-
-
-
-
-
-
