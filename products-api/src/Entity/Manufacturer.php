@@ -44,7 +44,10 @@ class Manufacturer
      * 
      * @ORM\Column
      */
-    #[Assert\NotBlank]
+    #[
+        Assert\NotBlank,
+        Groups(["product.read"])
+    ]
     private string $name = "";
 
     /** 
